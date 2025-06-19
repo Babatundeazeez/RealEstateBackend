@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; line-height: 1.2;">
+       <h2> Hi ${userName},</h2>
+
+<p>Thank you for registering with <strong>BabzRealEstate</strong> — your trusted real estate platform.</p>
+
+<p>To complete your registration, please verify your email using the link below</p>
+
+<h3 style="background: #f1f1f1; padding: 5px; display: inline-block;">${link}</h3>
+
+<p>This code will expire in 10 minutes.</p>
+    <p>If you didn’t sign up for BabzRealEstate, please ignore this email.</p>
+
+    <br/>
+    <p>Best regards,</p>
+    <p><strong>The BabzRealEstate Team</strong></p>
+    <a href="${process.env.client_name}/verify/${token}"></a>
+
+
+
+    </div>
+    
+</body>
+</html>
