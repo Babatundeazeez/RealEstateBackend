@@ -3,6 +3,8 @@ const jwt = require("jsonwebtoken")
 const usersModel = require("../Model/userModel")
 const sendVerificationEmail = require("../Services/nodemailer/sendEmailVerification")
 const generateRandomstring = require("../utilities/GenerateRandomToken")
+const GusersModel = require("../Model/GUserModel")
+
 
 
 
@@ -78,7 +80,23 @@ const emailVerify = async( req, res) =>{
 }
 
 
+///FrontUser made a request on property/////////////
+const frontUser = async(req, res) =>{
+    const {names, email, phone, description} = req.body
+    try {
+        const fUser = await GusersModel.create({names, email, phone, description})
 
+        res.status(202).json({message : "Your request has been sent successfully"}),
+        fUser
+        //alert("Your request has been sent successfully")
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message : "something went wrong"})
+        
+    }
+
+}
 
 
 
@@ -108,11 +126,12 @@ const signIn = async (req, res) =>{
             })
         }
         //generate accessToken for the user
-        const accessToken = jwt.sign({id: user._id, email: user.email}, process.env.jwt_pass,{expiresIn : process.env.tokenExp})
+        const accessToken = jwt.sign({id: user._id, role: user.role, email: user.email}, process.env.jwt_pass,{expiresIn : process.env.tokenExp})
         
         res.status(200).json({
             status : "success",
             mesage : "Sign In successfully, please proceed to the dashboard",
+            user,
             accessToken
         })
 
@@ -126,8 +145,60 @@ const signIn = async (req, res) =>{
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 
+const propertyOwner = async(req, res) =>{
+    try {
+        res.json({message : "Welcome to property owner page"})
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+
+}
+const developer = async(req, res) =>{
+    try {
+        res.json({message : "Welcome to Developer/build page"})
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+
+}
+const propertyUser = async(req, res) =>{
+    try {
+        res.json({message : "Welcome to User/buyer page"})
+        
+    } catch (error) {
+        console.log(error);  
+    }
+}
+const agent = async(req, res) =>{
+    try {
+        res.json({message : "Welcome to agent/comission page"})
+        
+    } catch (error) {
+        console.log(error);  
+    }
+}
+const admin = async(req, res) =>{
+    try {
+        res.json({message : "Welcome to admin/over see all page"})
+        
+    } catch (error) {
+        console.log(error);  
+    }
+}
+///////////////////////////////////////////////////////
+
 module.exports = {
     signUp,
     signIn,
-    emailVerify
+    emailVerify,
+    propertyOwner,
+    developer,
+    propertyUser,
+    agent,
+    admin,
+    frontUser
 }

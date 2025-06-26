@@ -1,0 +1,102 @@
+[
+    {
+        "id" : "1",
+        "name" : "Three bed-room flat",
+        "title" : "Detached duplex for sale",
+        "location" : "Ibadan",
+        "description" : "3 bed kolapo n5b exquisite 3 bedroom fully detached smart home with bq, swimming",
+        "price" : "$10000000",
+        "contact" : "+2348101806661",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750332184/wfdv8h2zn0odbqy9za2x.jpg" 
+    },
+    {
+        "id" : "2",
+        "name" : "Three bed-room flat",
+        "title" : "UnCompleted Flat for sale",
+        "location" : "Ibadan",
+        "description" : "2 bed kolapo n5b exquisite 3 bedroom fully detached smart home with bq,pool,cinema,room and gym location",
+        "price" : "$70000000",
+        "contact" : "+2348055706008",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750617465/dlf7v1dsrdody6ruxmum.jpg" 
+    },
+    {
+        "id" : "3",
+        "name" : "Three bed-room flat",
+        "title" : "Detached duplex for sale",
+        "location" : "Ibadan",
+        "description" : "4 bed kolapo n5b exquisite 3 bedroom fully detached smart home with bq, swimming pool,cinema, game room and gym location",
+        "price" : "$90000000",
+        "contact" : "+2348101806660",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750617745/jqq2kedindubcu5rrkww.jpg"
+    },
+    {
+        "id" : "4",
+        "name" : "Three bed-room flat",
+        "title" : "Modern 3-Bedroom Duplex in Kolapo Ishola GRA",
+        "location" : "Ibadan",
+        "description" : "A spacious, fully detached duplex with en-suite bedrooms, a fitted kitchen, and ample parking.",
+        "price" : "$30000000",
+        "contact" : "+2348138839421",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750617981/ijhatrphws8gajqhiy9o.jpg" 
+    },
+    {
+        "id" : "5",
+        "name" : "Three bed-room flat",
+        "title" : " Affordable 2-Bedroom Apartment in Ibadan UnCompleted duplex for sale",
+        "location" : "Ibadan",
+        "description" : "Cozy and well-ventilated apartment, ideal for small families or working professionals.",
+        "price" : "$80000000",
+        "contact" : "+2348101806561",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618088/to15swsbigna1n4dkkki.jpg" 
+    },
+    {
+        "id" : "6",
+        "name" : "Uncompleted Three bed-room flat",
+        "title" : " Luxury 4-Bedroom Terrace in Ikoyi Detached duplex for sale",
+        "location" : "Ibadan",
+        "description" : "Elegantly designed terrace with smart home features, 24/7 power, and a serene neighborhood.",
+        "price" : "$70000000",
+        "contact" : "+2348101807661",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618193/uhlzqiqkqk5qr97izdjq.jpg" 
+    },
+    {
+        "id" : "7",
+        "name" : "Two bed-room flat",
+        "title" : "Mini Flat in Ibadan Detached duplex for sale",
+        "location" : "Ibadan",
+        "description" : "Neat and secure mini flat with a kitchen, private bathroom, and tiled floors.",
+        "price" : "$18000000",
+        "contact" : "+2348101806660",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618279/xb4n5kpal6hzxtt3doqd.jpg" 
+    },
+    {
+        "id" : "8",
+        "name" : "Three bed-room flat",
+        "title" : "5-Bedroom Mansion in Aerodrome Estate Detached duplex for sale at Kolapo Ishola",
+        "location" : "Ibadan",
+        "description" : "Exquisite mansion with swimming pool, home cinema, elevator, and sea view.",
+        "price" : "$15000000",
+        "contact" : "+2348101806211",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618353/enha5huh49zdqjmfzfii.jpg" 
+    },
+    {
+        "id" : "9",
+        "name" : "Three bed-room flat",
+        "title" : "Bungalow in Ibadan Detached duplex for sale at Jerico Ibadan",
+        "location" : "Ibadan",
+        "description" : "Fully fenced 3-bedroom bungalow with borehole water and a secure compound.",
+        "price" : "$20000000",
+        "contact" : "+2348101801061",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618428/xcx1xzmeeq2vtxp8lbhb.jpg" 
+    },
+    {
+        "id" : "10",
+        "name" : "Three bed-room flat",
+        "title" : "Detached duplex for sale",
+        "location" : "Ibadan",
+        "description" : "3 bed kolapo n5b exquisite 3 bedroom fully detached smart home with bq, swimming          pool,cinema, game room and gym location",
+        "price" : "$30000000",
+        "contact" : "+2348101806641",
+        "image" : "https://res.cloudinary.com/disviykki/image/upload/v1750618487/kgiiwhabkhlwyofd9n3s.jpg" 
+    }
+]
