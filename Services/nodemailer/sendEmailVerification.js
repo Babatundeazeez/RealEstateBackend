@@ -1,6 +1,7 @@
 const transporter = require("./transporter")
 
 const sendVerificationEmail = (email, userName, token) =>{
+    
     const options = {
         to : email,
         subject : "Welcome to Babz Real Estate! Lets verify your account",

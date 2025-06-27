@@ -36,11 +36,42 @@ const addProperty = async(req, res) =>{
                 status : "error",
                 message : "Internal server error"
             })
-        
-        
+          
     }
 }
+
+const displayProperty = async(req, res) =>{
+
+    const proImage = req.file.path
+    try {
+        const userProperty = await propertyModel.create({...req.body, image : proImage})
+        console.log(req.body);
+        if(!userProperty){
+            return res.status(4003).json({
+                status : "error",
+                message : "property is not added"
+            })
+        }
+        res.status(201).json({
+            status : "success",
+            message : "property was added successfully",
+            userProperty
+        })
+        
+        
+    } catch (error) {
+        res.status(500).json({
+            status : "error",
+            message : "server error"
+        })
+    }
+
+        }
+
+
+
 module.exports = {
     addProperty,
+    displayProperty
 
 }

@@ -88,7 +88,7 @@ const frontUser = async(req, res) =>{
 
         res.status(202).json({message : "Your request has been sent successfully"}),
         fUser
-        //alert("Your request has been sent successfully")
+        
         
     } catch (error) {
         console.log(error);
@@ -96,7 +96,12 @@ const frontUser = async(req, res) =>{
         
     }
 
+    sendVerificationEmail(names, email)
+
 }
+/////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////
+
 
 
 
