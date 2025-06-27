@@ -68,10 +68,33 @@ const displayProperty = async(req, res) =>{
 
         }
 
+        const getAllproperty = async(req, res) =>{
+            try {
+                const myProperty = await propertyModel.find()
+                if(!myProperty){
+                    return res.status(401).json({
+                        status : "error",
+                        messsage : "prperty not found"
+                    })
+                }
+                res.status(201).json({
+                    status : "success",
+                    message : "property found ",
+                    myProperty
+                })
+                
+            } catch (error) {
+                console.log(error);
+                
+            }
+
+        }
+
 
 
 module.exports = {
     addProperty,
-    displayProperty
+    displayProperty,
+    getAllproperty
 
 }
