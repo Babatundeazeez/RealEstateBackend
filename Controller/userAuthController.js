@@ -130,7 +130,7 @@ const signIn = async (req, res) =>{
                 message : "Email or Password is incorrect"
             })
         }
-        //generate accessToken for the user
+        ////////////////generate accessToken for the user//////////
         const accessToken = jwt.sign({id: user._id, role: user.role, email: user.email}, process.env.jwt_pass,{expiresIn : process.env.tokenExp})
         
         res.status(200).json({
@@ -178,6 +178,7 @@ const propertyUser = async(req, res) =>{
         console.log(error);  
     }
 }
+
 const agent = async(req, res) =>{
     try {
         res.json({message : "Welcome to agent/comission page"})
@@ -186,6 +187,7 @@ const agent = async(req, res) =>{
         console.log(error);  
     }
 }
+
 const admin = async(req, res) =>{
     try {
         res.json({message : "Welcome to admin/over see all page"})

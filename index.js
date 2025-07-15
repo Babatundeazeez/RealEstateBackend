@@ -11,6 +11,8 @@ app.use(express.json())
 const cors = require("cors");
 const userRouter = require("./userAuthRouterss/userRoutes");
 
+const BlogRouters = require("./PropertyRouter/BlogRouter");
+
 app.use(cors())
 ///connect to dbMongose//////////////
 connectToDB()
@@ -25,6 +27,7 @@ app.use('/api/auth', authRouter)
 app.use('/api/property', propertyRouter)
 
 app.use('/api/users',userRouter)
+app.use('/api/blog', BlogRouters)
 
 
 

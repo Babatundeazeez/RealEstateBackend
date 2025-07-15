@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const propertySchema = new mongoose.Schema({
-    tile : {
+    title : {
         type : String,
         require : true
     },
@@ -48,9 +48,15 @@ const propertySchema = new mongoose.Schema({
     createdAt : {
         type : Date,
         default : Date.now()
-    }
+    },
+    status : {
+        type : String,
+        enum : ["pending", "approved", "disapproved"],
+        default : "pending"
+    },
+    
 
-})
+}, {timestamps : true})
 
 const propertyModel = mongoose.model("property", propertySchema)
 module.exports = propertyModel
