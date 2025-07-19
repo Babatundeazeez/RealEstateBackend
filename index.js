@@ -10,7 +10,11 @@ const propertyRouter = require("./PropertyRouter/PropertyRouters");
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 const cors = require("cors");
-app.use(cors())
+
+app.use(cors({
+    origin:'https://real-estate-projects-54plt8pav.vercel.app',
+    credentials: true
+}));
 const userRouter = require("./userAuthRouterss/userRoutes");
 
 const BlogRouters = require("./PropertyRouter/BlogRouter");
