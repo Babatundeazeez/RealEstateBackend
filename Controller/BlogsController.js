@@ -1,6 +1,6 @@
 const blogModel = require("../Model/propertyBlogModel") 
 
-const addBlog = async(req, res) => {
+const addBlog = async(req, res, next) => {
 
     const blogImage = req.file.path
     try {
@@ -23,6 +23,7 @@ const addBlog = async(req, res) => {
         console.log(error);
         
     }
+    next(error)
 }
 
 const deleteBlogPost = async(req, res) => {
@@ -47,7 +48,7 @@ const deleteBlogPost = async(req, res) => {
     }
 }
 
-const getBlogPost = async(req, res) =>{
+const getBlogPost = async(req, res, next) =>{
     try {
         const blogPost = await blogModel.find()
         if (!blogPost){
@@ -66,6 +67,7 @@ const getBlogPost = async(req, res) =>{
         
         
     }
+    next()
 
 }
 

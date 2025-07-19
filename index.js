@@ -8,12 +8,16 @@ const propertyFile = require("./utilities/property.json")
 const propertyRouter = require("./PropertyRouter/PropertyRouters");
 
 app.use(express.json())
+app.use(express.urlencoded({extended : true}))
 const cors = require("cors");
+app.use(cors())
 const userRouter = require("./userAuthRouterss/userRoutes");
 
 const BlogRouters = require("./PropertyRouter/BlogRouter");
+const errorHandlers = require("./MiddleWare/ErrorHandler");
+const GeneralRouter = require("./PropertyRouter/GeUserRouter");
 
-app.use(cors())
+
 ///connect to dbMongose//////////////
 connectToDB()
 const PORT = 1300;
@@ -25,9 +29,9 @@ app.listen(PORT, ()=>{
 
 app.use('/api/auth', authRouter)
 app.use('/api/property', propertyRouter)
-
 app.use('/api/users',userRouter)
 app.use('/api/blog', BlogRouters)
+app.use('/api/generalUser', GeneralRouter)
 
 
 
@@ -40,4 +44,14 @@ app.get('/api/states', (req, res) =>{
 app.get('/api/property', (req, res)=>{
     res.json(propertyFile)
 })
+
+// app.all("/*", (req, res) => {
+//     res.json(`${req.method} ${req.originalUrl} is not an end point to this server`)
+// })
+app.use((req,res) =>{
+    res.status(404).json({
+        message : `${req.method} ${req.originalUrl} is not an end point to this server`
+    })
+})
+app.use(errorHandlers);
 

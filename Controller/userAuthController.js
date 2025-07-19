@@ -11,7 +11,7 @@ const GusersModel = require("../Model/GUserModel")
 
 
 //////////////Function for sign up ///////////////////////////////////////////
-const signUp = async(req, res) =>{
+const signUp = async(req, res, next) =>{
 
     const {password,email, name, role} = req.body
 
@@ -28,6 +28,7 @@ const signUp = async(req, res) =>{
             return res.status(400).json({
                 status : "error",
                 message : "could not sign up "
+                
             })
         }
         const userName = name.split(" ")[0]
@@ -40,8 +41,10 @@ const signUp = async(req, res) =>{
         
     } catch (error) {
         console.log(error);
+        next(error)
         
     }
+    
 }
 ///////////////function to verify email/////////////////
 const emailVerify = async( req, res) =>{
@@ -73,8 +76,8 @@ const emailVerify = async( req, res) =>{
         })
         // ("Your Email has been verify, kindly proceed to login page")
         
-    } catch (error) {
-        console.log(error);
+    } catch (err) {
+        console.log(err);
         
     }
 }
@@ -111,7 +114,7 @@ const frontUser = async(req, res) =>{
 
 
 /////////////////////////// function for sign in///////////////////////////////////
-const signIn = async (req, res) =>{
+const signIn = async (req, res, next) =>{
     const {email, password} = req.body
     try {
         const user = await usersModel.findOne({email})
@@ -144,6 +147,7 @@ const signIn = async (req, res) =>{
         
     } catch (error) {
         console.log(error);
+        next(error)
         
     }
 
