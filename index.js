@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 
 app.use(cors({
-    origin:['https://real-estate-projects-54plt8pav.vercel.app'],
+    origin:["http://localhost:5173",'https://real-estate-projects-54plt8pav.vercel.app'],
     methods : ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
