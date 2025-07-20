@@ -11,20 +11,33 @@ const nigeriaStates = require("./utilities/nigeriaState.json")
 const propertyFile = require("./utilities/property.json")
 
 const cors = require("cors");
-
 const app = express()
-
-connectToDB()
-
 app.use(express.json())
 
 app.use(express.urlencoded({extended : true}))
 
+const allowedOrigins =[
+    "http://localhost:5173",
+    'https://real-estate-projects-54plt8pav.vercel.app',
+    "https://real-estate-projects-bbp9-7m0qj5qjm.vercel.app"
+
+]
+
 app.use(cors({
-    origin:["http://localhost:5173",'https://real-estate-projects-54plt8pav.vercel.app'],
+    origin: function( origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)){
+            callback(null, true);
+
+        }else{
+            callback (new Error("Not allowed byCORS"))
+        }
+    },
     methods : ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
+
+
+connectToDB()
 
 
 ///connect to dbMongose//////////////
