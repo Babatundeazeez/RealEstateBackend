@@ -15,21 +15,21 @@ const handleDuplicateError = (err) =>{
 ////////////////////////////////////////////////
 
 const handleValidationError = (err) =>{
-    const messages = Object.values(err.errors).map(error => error.message)
+    const message = Object.values(err.errors).map(error => error.message)
             return{
                 statusCode : 400,
-                message : messages[0]
+                message : message[0]
             }
     }
 
 //////////////////////////////////////////////
 
     const handleCastError = (err) =>{
-        const messages = `${err.path} ${err.value} is invalid`
-        const error = new Error(messages)
+        const message = `${err.path} ${err.value} is invalid`
+        const error = new Error(message)
         return {
             statusCode : 400,
-            message : error.messages
+            message : error.message
         }
     
     }

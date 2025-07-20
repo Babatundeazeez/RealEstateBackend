@@ -48,8 +48,9 @@ app.listen(PORT, ()=>{
 })
 //////////Router///////////////////////////
 app.use('/api/auth', authRouter)
+
 app.use('/api/property', propertyRouter)
-app.use('/api/users',userRouter)
+//app.use('/api/users',userRouter)
 app.use('/api/blog', BlogRouters)
 app.use('/api/generalUser', GeneralRouter)
 
