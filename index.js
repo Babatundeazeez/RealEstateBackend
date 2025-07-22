@@ -16,12 +16,12 @@ app.use(express.json())
 
 app.use(express.urlencoded({extended : true}))
 
-const allowedOrigins =[
-    "http://localhost:5173",
-    'https://real-estate-projects-54plt8pav.vercel.app',
-    "https://real-estate-projects-bbp9-7m0qj5qjm.vercel.app"
+// const allowedOrigins =[
+//     "http://localhost:5173",
+//     'https://real-estate-projects-54plt8pav.vercel.app',
+//     "https://real-estate-projects-bbp9-7m0qj5qjm.vercel.app"
 
-]
+// ]
 
 app.use(cors());
 
