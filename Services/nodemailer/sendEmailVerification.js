@@ -16,7 +16,7 @@ const sendVerificationEmail = (email, userName, token) =>{
             <p>To complete your registration, please verify your email using the link below</p>
 
            
-            <a href="${process.env.client_name}/verify/${token}">Please verify here</a>
+            <a href="${process.env.client_name}verify/${token}">Please verify here</a>
 
         <p>This code will expire in 10 minutes.</p>
         <p>If you didn’t sign up for BabzRealEstate, please ignore this email.</p>
